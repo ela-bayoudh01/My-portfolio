@@ -1,5 +1,4 @@
-/* Tooplate 2140 Stellaris Research - Modified for Cloud Engineering with Feminine Touch */
-/* https://www.tooplate.com/view/2140-stellaris-research */
+
 
 // JavaScript Document
 
