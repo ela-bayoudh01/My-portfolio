@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ela Bayoudh - Cloud & Cybersecurity Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="tooplate-stellaris-style.css" rel="stylesheet">
+</head>
+<body>
+    <canvas id="starfield"></canvas>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Cloud shape with gradient -->
+                    <defs>
+                        <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6b7280"/>
+                            <stop offset="100%" style="stop-color:#e9d5ff"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M30,70 Q20,60 30,50 Q40,40 50,40 Q60,40 70,50 Q80,60 70,70 H30 Z" fill="url(#cloudGradient)" stroke="#e9d5ff" stroke-width="2" opacity="0.8"/>
+                    <!-- Heart-shaped circuit line -->
+                    <path d="M45,60 Q50,65 55,60 Q60,55 55,50 Q50,55 45,50 Q40,55 45,60" fill="none" stroke="#f9a8d4" stroke-width="1.5"/>
+                    <!-- Orbiting data nodes -->
+                    <circle cx="80" cy="50" r="4" fill="#f9a8d4">
+                        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="8s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="20" cy="50" r="3" fill="#e9d5ff">
+                        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="-360 50 50" dur="12s" repeatCount="indefinite"/>
+                    </circle>
+                    <!-- Central glow -->
+                    <circle cx="50" cy="50" r="8" fill="#f9a8d4" opacity="0.3"/>
+                </svg>
+                <span class="logo-text">ELA BAYOUDH</span>
+            </a>
+            
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#education">EDUCATION</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#experience">EXPERIENCE</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <!-- Network grid layer -->
+        <div class="stars-layer"></div>
+        
+        <!-- Floating cloud elements -->
+        <div class="cloud-element"></div>
+        <div class="cloud-element"></div>
+        <div class="cloud-element"></div>
+        <div class="cloud-element"></div>
+        
+        <!-- Data packets -->
+        <div class="data-packet" style="--delay: 0s; --top: 10%; --left: 10%; --color: #e9d5ff;"></div>
+        <div class="data-packet" style="--delay: 1.5s; --top: 30%; --left: 60%; --color: #f9a8d4;"></div>
+        <div class="data-packet" style="--delay: 3s; --top: 20%; --left: 80%; --color: #e9d5ff;"></div>
+        <div class="data-packet" style="--delay: 4.5s; --top: 60%; --left: 30%; --color: #f9a8d4;"></div>
+        <div class="data-packet" style="--delay: 6s; --top: 80%; --left: 70%; --color: #e9d5ff;"></div>
+        
+        <div class="hero-content">
+            <h1 class="cosmic-title">ELA BAYOUDH</h1>
+            <p class="subtitle">Software Engineering Student Exploring Cloud & Cybersecurity</p>
+        </div>
+        <a href="#about" class="scroll-btn">
+            <div class="scroll-btn-inner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                </svg>
+            </div>
+        </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="fade-in">
+        <h2 class="section-title">ABOUT ME</h2>
+        <div class="about-section">
+            <div class="about-hero">
+                <h3>Exploring the Future of Cloud & Cybersecurity</h3>
+                <p class="about-description">
+                    As a second-year engineering student specializing in Cloud and Cybersecurity, I am passionate about building a strong foundation in secure cloud technologies and innovative cybersecurity solutions. Eager to grow in a dynamic, technology-driven environment, I am committed to gaining hands-on experience and building a solid foundation in these fields through continuous learning and practical application.
+                </p>
+                <a href="Ela-Bayoudh-Resume.pdf" download="Ela_Bayoudh_CV.pdf" class="inline-block px-6 py-3 bg-yellow-600 text-gray-800 font-semibold rounded-full hover:bg-yellow-500 transition">Download My CV (PDF)</a>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <span class="about-card-icon">💻</span>
+                    <h4>Technical Skills</h4>
+                    <p>Built skills in HTML, CSS, JavaScript, React.js, Node.js, Express.js, Java, PHP, Next.js, Nest.js, Symfony, and MySQL through team projects like SportX and a task management system.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-card-icon">🔒</span>
+                    <h4>Cybersecurity Interest</h4>
+                    <p>Actively learning secure cloud architectures and cybersecurity practices, with hands-on experience in building secure platforms.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-card-icon">🤝</span>
+                    <h4>Team Leadership</h4>
+                    <p>Led teams in scout groups and university clubs, fostering collaboration and managing technical projects and events.</p>
+                </div>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-number">4</div>
+                    <div class="achievement-label">Projects Completed</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">4</div>
+                    <div class="achievement-label">Internships</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">1</div>
+                    <div class="achievement-label">Hackathon Win</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">3</div>
+                    <div class="achievement-label">Arabic (Native), French (B2), English (B2)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="fade-in">
+        <h2 class="section-title">EDUCATION</h2>
+        <div class="mission-grid">
+            <div class="mission-card">
+                <h4>Engineering Degree in Computer Engineering</h4>
+                <p>Private Higher School of Engineering and Technology of Monastir (ESPRIM)<br>Sep 2024 - Present</p>
+                <span class="mission-status">Ongoing</span>
+            </div>
+            <div class="mission-card">
+                <h4>Degree in Software and Computer Science</h4>
+                <p>Higher Institute of Computer Science and Mathematics of Monastir (ISIMM)<br>Sep 2021 - Jun 2024</p>
+                <span class="mission-status">Completed</span>
+            </div>
+            <div class="mission-card">
+                <h4>Baccalaureate Degree in Mathematics</h4>
+                <p>Pioneer School of Monastir<br>Sep 2017 - Jun 2021</p>
+                <span class="mission-status">Completed</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="fade-in">
+        <h2 class="section-title">SKILLS</h2>
+        <div class="equipment-container">
+            <div class="equipment-item"><span>HTML, CSS</span></div>
+            <div class="equipment-item"><span>Java, JavaFX</span></div>
+            <div class="equipment-item"><span>PHP, Symfony</span></div>
+            <div class="equipment-item"><span>JavaScript</span></div>
+            <div class="equipment-item"><span>Next.js, Nest.js</span></div>
+            <div class="equipment-item"><span>React.js</span></div>
+            <div class="equipment-item"><span>Node.js, Express.js</span></div>
+            <div class="equipment-item"><span>Python</span></div>
+            <div class="equipment-item"><span>MySQL</span></div>
+            <div class="equipment-item"><span>Git</span></div>
+            <div class="equipment-item"><span>Docker</span></div>
+            <div class="equipment-item"><span>Team Collaboration</span></div>
+            <div class="equipment-item"><span>Problem-Solving</span></div>
+            <div class="equipment-item"><span>Leadership</span></div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="missions-section fade-in">
+        <div class="missions-container">
+            <h2 class="section-title">WORK EXPERIENCE</h2>
+            <div class="mission-content active" id="experience">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <h4>Summer Internship</h4>
+                        <p>Nexans Ksarhellal, Ksarhellal, Tunisia<br>Jul 2025 - Aug 2025<br>Contributed to the development of a web-based task management system to improve departmental workflows.</p>
+                        <span class="mission-status">Completed</span>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Internship for Final Year Project</h4>
+                        <p>Pura Solutions, Sousse, Tunisia<br>Feb 2024 - Jun 2024<br>Designed and developed a cloud platform for sharing confidential accounting documents using Next.js, Nest.js, and Flutter, implementing secure file sharing and user authentication.</p>
+                        <span class="mission-status">Completed</span>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Summer Internship</h4>
+                        <p>Proxym-IT, Sousse, Tunisia<br>Jul 2023 - Aug 2023<br>Developed an online cinema booking platform using Node.js, React, CSS, Prisma, and MySQL, focusing on REST API for authentication and booking processes.</p>
+                        <span class="mission-status">Completed</span>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Summer Internship</h4>
+                        <p>Sancella, Ksibet el Mediouni / Monastir<br>Jun 2023 - Jul 2023<br>Gained knowledge in computer networking, including protocols, architectures, and security measures, while observing network device configuration.</p>
+                        <span class="mission-status">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="missions-section fade-in">
+        <div class="missions-container">
+            <h2 class="section-title">PROJECTS</h2>
+            <div class="mission-content active" id="projects">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <h4>SportX Sports Management Platform</h4>
+                        <p>Jan 2025 - Present<br>Developed a desktop and web application using JavaFX, Symfony, PHP, FXML, CSS, and MySQL, focusing on full-stack development and team collaboration.</p>
+                        <span class="mission-status">Ongoing</span>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Task Management System for Nexans</h4>
+                        <p>2025<br>Developed a web-based task management system using React.js, Node.js, Express.js, and MySQL to streamline workflows across multiple departments (Clients, Supervisor, CAD for design, and CNC for manufacturing), enhancing task tracking, order processing, and supervisory oversight.</p>
+                        <span class="mission-status">Completed</span>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Cloud Platform for Confidential Accounting Documents</h4>
+                        <p>2024<br>Built a secure cloud platform using Next.js, Nest.js, Tailwind CSS, and MongoDB for sharing confidential accounting documents.</p>
+                        <span class="mission-status">Completed</span>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Online Cinema Booking Platform</h4>
+                        <p>2023<br>Developed a platform with Node.js, Express.js, HTML, CSS, MySQL, and Prisma, implementing REST API for movie listing and booking.</p>
+                        <span class="mission-status">Completed</span>
+                    </div>
+                    <div class="mission-card">
+                        <h4>E-Learning Platform</h4>
+                        <p>2022<br>Designed and developed a platform using HTML, CSS, PHP, MySQL, and UML design for educational content delivery.</p>
+                        <span class="mission-status">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">CONTACT ME</h2>
+        <div class="contact-form">
+            <div class="form-group">
+                <p>Email: <a href="mailto:elapro01bayoudh@gmail.com" class="underline hover:text-yellow-600">elapro01bayoudh@gmail.com</a></p>
+            </div>
+            <div class="form-group">
+                <p>Phone: 29 203 089</p>
+            </div>
+            <div class="form-group">
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/ela-bayoudh-34976823b/" class="underline hover:text-yellow-600">linkedin.com/in/ElaBayoudh</a></p>
+            </div>
+            <div class="form-group">
+                <p>GitHub: <a href="https://github.com/elabayoudh" class="underline hover:text-yellow-600">github.com/elabayoudh</a></p>
+            </div>
+            <div class="form-group">
+                <p>GitHub (Secondary): <a href="https://github.com/ela-bayoudh01" class="underline hover:text-yellow-600">github.com/ela-bayoudh01</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>My Journey</h3>
+                <p style="color: var(--star-silver); margin-bottom: 15px;">
+                    Driven by a passion for cloud and cybersecurity, I’m diving into these fields from the ground up, eagerly learning and building secure, innovative solutions. 
+                <a href="#about" class="underline hover:text-soft-pink">Discover My Story</a>
+            </div>
+            <div class="footer-section">
+                <h3>Get in Touch</h3>
+                <p style="color: var(--star-silver); margin-bottom: 15px;">
+                    Let's connect to discuss opportunities, collaborations, or just chat about tech!
+                </p>
+                <a href="#contact" class="underline hover:text-soft-pink">Contact Me</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p style="color: var(--star-silver); margin-bottom: 15px;">
+                    Connect with me on professional networks
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ela-bayoudh-34976823b/" aria-label="LinkedIn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/elabayoudh" aria-label="GitHub">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ela Bayoudh - Cloud & Cybersecurity Portfolio. Design: <a href="https://www.tooplate.com" target="_blank" rel="noopener nofollow">Tooplate</a></p>
+        </div>
+    </footer>
+    <script src="tooplate-stellaris-script.js"></script>
+</body>
+</html>
