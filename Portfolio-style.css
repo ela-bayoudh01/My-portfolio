@@ -411,7 +411,7 @@ section#home.hero {
     font-size: 1.4rem;
     font-weight: 400;
     opacity: 1; /* augmenter la visibilité */
-    background: linear-gradient(130deg, #f9a8d4, #ffffff); /* plus clair */
+    background: linear-gradient(130deg, #ecbcd7, #ffffff); /* plus clair */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
