@@ -1,312 +1,669 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ela Bayoudh - Cloud & Cybersecurity Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="portfolio-style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ela Bayoudh — Software Engineering Student specializing in Cloud & Cybersecurity." />
+  <title>Ela Bayoudh — Cloud &amp; Cybersecurity</title>
+  <link rel="stylesheet" href="CSS/variables.css" />
+  <link rel="stylesheet" href="CSS/navigation.css" />
+  <link rel="stylesheet" href="CSS/hero.css" />
+  <link rel="stylesheet" href="CSS/sections.css" />
 </head>
 <body>
-    <canvas id="starfield"></canvas>
 
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo-container">
-                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Cloud shape with gradient -->
-                    <defs>
-                        <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#6b7280"/>
-                            <stop offset="100%" style="stop-color:#e9d5ff"/>
-                        </linearGradient>
-                    </defs>
-                    <path d="M30,70 Q20,60 30,50 Q40,40 50,40 Q60,40 70,50 Q80,60 70,70 H30 Z" fill="url(#cloudGradient)" stroke="#e9d5ff" stroke-width="2" opacity="0.8"/>
-                    <!-- Heart-shaped circuit line -->
-                    <path d="M45,60 Q50,65 55,60 Q60,55 55,50 Q50,55 45,50 Q40,55 45,60" fill="none" stroke="#f9a8d4" stroke-width="1.5"/>
-                    <!-- Orbiting data nodes -->
-                    <circle cx="80" cy="50" r="4" fill="#f9a8d4">
-                        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="8s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="20" cy="50" r="3" fill="#e9d5ff">
-                        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="-360 50 50" dur="12s" repeatCount="indefinite"/>
-                    </circle>
-                    <!-- Central glow -->
-                    <circle cx="50" cy="50" r="8" fill="#f9a8d4" opacity="0.3"/>
-                </svg>
-                <span class="logo-text">Welcome to Ela's journey </span>
-            </a>
-            
-            <div class="mobile-menu-toggle" id="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            
-            <div class="nav-menu" id="nav-menu">
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#education">EDUCATION</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="#experience">EXPERIENCE</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
 
-    <!-- HOME -->
-    <section id="home" class="hero">
-        <!-- Network grid layer -->
-        <div class="stars-layer"></div>
-        
-        <!-- Floating cloud elements -->
-        <div class="cloud-element"></div>
-        <div class="cloud-element"></div>
-        <div class="cloud-element"></div>
-        <div class="cloud-element"></div>
-        
-        <!-- Data packets -->
-        <div class="data-packet" style="--delay: 0s; --top: 10%; --left: 10%; --color: #e9d5ff;"></div>
-        <div class="data-packet" style="--delay: 1.5s; --top: 30%; --left: 60%; --color: #f9a8d4;"></div>
-        <div class="data-packet" style="--delay: 3s; --top: 20%; --left: 80%; --color: #e9d5ff;"></div>
-        <div class="data-packet" style="--delay: 4.5s; --top: 60%; --left: 30%; --color: #f9a8d4;"></div>
-        <div class="data-packet" style="--delay: 6s; --top: 80%; --left: 70%; --color: #e9d5ff;"></div>
-        
-        <div class="hero-content">
-            <h1 class="cosmic-title">ELA BAYOUDH</h1>
-            <p class="subtitle">Software Engineering Student Exploring Cloud & Cybersecurity</p>
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="nav-logo-mark">EB</span>
+      <span class="nav-logo-text">Ela Bayoudh</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-bg">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-gradient"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-line"></span>
+          <span class="hero-eyebrow-text">4th Year Engineering Student · Monastir, Tunisia</span>
         </div>
-        <a href="#about" class="scroll-btn">
-            <div class="scroll-btn-inner">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-                </svg>
+        <h1 class="hero-name">Ela<br><em>Bayoudh</em></h1>
+        <p class="hero-title">Cloud Engineering &amp; <span class="highlight">Cybersecurity</span></p>
+        <p class="hero-desc">
+          4th-year engineering student specialised in Cloud &amp; Cybersecurity — building secure microservices,
+          DevSecOps pipelines, and SIEM/SOAR architectures. 3x hackathon winner, CTF competitor.
+        </p>
+        <div class="hero-cta">
+          <a href="CV_BayoudhEla.pdf" download class="btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+          <a href="#contact" class="btn-ghost">Get in touch</a>
+        </div>
+        
+      </div>
+      <div class="hero-photo">
+      <img src="profile3.png" alt="Ela Bayoudh" />
+    </div>
+      <div class="hero-right">
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">4+</div>
+            <div class="hero-stat-label">Internships</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">6</div>
+            <div class="hero-stat-label">Projects built</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">3</div>
+            <div class="hero-stat-label">Hackathon wins</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span class="scroll-text">Scroll</span>
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section about-inner">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="section-label-num">01</span>
+          <span class="section-label-line"></span>
+          <span class="section-label-text">Who I am</span>
+        </div>
+        <h2 class="section-title">About <em>Me</em></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal reveal-delay-1">
+          <p>
+            I'm a <strong>4th-year engineering student at ESPRIM Monastir</strong>, specialising in
+            Cloud Computing and Cybersecurity. My path started with a Baccalaureate in Mathematics,
+            a degree in Software &amp; Computer Science from ISIMM, giving me a solid foundation
+            before diving deep into security and cloud infrastructure.
+          </p>
+          <p>
+            My current focus is on <strong>secure microservices architectures</strong>, DevSecOps
+            pipelines, and threat detection using SIEM/SOAR.
+          </p>
+          <p>
+  Committed to active societal participation and collaborative environments, 
+  I have held leadership positions including <strong>Scout leader since 2017</strong>, president of the CPU club at ISIMM, 
+  and board member of the SciData club at ESPRIM. 
+  These experiences have honed my ability to lead teams, foster communication, and contribute positively to both academic and community networks.
+</p>
+          <div class="about-detail-list">
+            <div class="about-detail-item">
+              <span class="about-detail-key">Location</span>
+              <span class="about-detail-val">Monastir, Tunisia</span>
             </div>
+            <div class="about-detail-item">
+              <span class="about-detail-key">Born</span>
+              <span class="about-detail-val">23 September 2002</span>
+            </div>
+            <div class="about-detail-item">
+              <span class="about-detail-key">Status</span>
+              <span class="about-detail-val">Open to internships &amp; opportunities</span>
+            </div>
+            <div class="about-detail-item">
+              <span class="about-detail-key">Languages</span>
+              <span class="about-detail-val">Arabic (native) · French (B2) · English (B2)</span>
+            </div>
+            <div class="about-detail-item">
+              <span class="about-detail-key">Interests</span>
+              <span class="about-detail-val">Sports · Camping · Robotics · Language learning · Community</span>
+            </div>
+            <div class="about-detail-item">
+              <span class="about-detail-key">Methodology</span>
+              <span class="about-detail-val">Scrum / Agile</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="about-card reveal reveal-delay-2">
+            <span class="about-card-icon">🔐</span>
+            <h4>Cybersecurity &amp; Networks</h4>
+            <p>SIEM &amp; SOAR, secure network segmentation (LAN/DMZ/SOC), firewalls, ACL, VPN, network cryptography, ML for Cybersecurity. Preparing for CCNA Network Security certification.</p>
+          </div>
+          <div class="about-card reveal reveal-delay-3">
+            <span class="about-card-icon">☁️</span>
+            <h4>Cloud &amp; DevOps</h4>
+            <p>Docker, Kubernetes, CI/CD (GitLab CI), OpenStack Private Cloud, Grafana observability. Currently building SentinelBank — a secure e-Banking microservices platform.</p>
+          </div>
+          <div class="about-card reveal reveal-delay-4">
+            <span class="about-card-icon">🏆</span>
+            <h4>Competition Track</h4>
+            <p>1st place GreeNovation Hackathon · 2nd place Cybersecurity Hackathon "Insight" (IEEE) · 2nd place Mini CTF Securinets EPS — web exploitation, crypto &amp; forensics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section education-inner">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="section-label-num">05</span>
+          <span class="section-label-line"></span>
+          <span class="section-label-text">Academic path</span>
+        </div>
+        <h2 class="section-title"><em>Education</em></h2>
+      </div>
+      <div class="education-list reveal reveal-delay-1">
+        <div class="edu-item">
+          <div class="edu-year">2024 — Present</div>
+          <div class="edu-info">
+            <div class="edu-degree">Engineering Degree in Computer Engineering</div>
+            <div class="edu-school">ESPRIM — Private Higher School of Engineering &amp; Technology, Monastir</div>
+          </div>
+          <span class="edu-badge current">Ongoing</span>
+        </div>
+        <div class="edu-item">
+          <div class="edu-year">2021 — 2024</div>
+          <div class="edu-info">
+            <div class="edu-degree">Degree in Software &amp; Computer Science</div>
+            <div class="edu-school">ISIMM — Higher Institute of Computer Science &amp; Mathematics, Monastir</div>
+          </div>
+          <span class="edu-badge">Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="section-label-num">02</span>
+        <span class="section-label-line"></span>
+        <span class="section-label-text">Technical toolkit</span>
+      </div>
+      <h2 class="section-title">Skills &amp; <em>Stack</em></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-category-name">Cybersecurity &amp; Networks</div>
+        <div class="skill-tags">
+          <span class="skill-tag">SIEM</span><span class="skill-tag">SOAR</span>
+          <span class="skill-tag">LAN / DMZ / SOC</span><span class="skill-tag">Firewalls &amp; ACL</span>
+          <span class="skill-tag">VPN</span><span class="skill-tag">Network Cryptography</span>
+          <span class="skill-tag">ML for Cybersecurity</span><span class="skill-tag">CCNA Network Security</span>
+        </div>
+      </div>
+      <div class="skill-category reveal reveal-delay-2">
+        <div class="skill-category-name">Cloud &amp; DevOps</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span><span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">CI/CD (GitLab CI)</span><span class="skill-tag">OpenStack</span>
+          <span class="skill-tag">Git</span><span class="skill-tag">Grafana</span>
+        </div>
+      </div>
+      <div class="skill-category reveal reveal-delay-3">
+        <div class="skill-category-name">Frontend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">React.js</span><span class="skill-tag">Next.js</span>
+          <span class="skill-tag">Angular</span><span class="skill-tag">HTML / CSS</span>
+        </div>
+      </div>
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-category-name">Backend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span><span class="skill-tag">Nest.js</span>
+          <span class="skill-tag">Java / Spring Boot</span><span class="skill-tag">Symfony / PHP</span>
+          <span class="skill-tag">Express.js</span>
+        </div>
+      </div>
+      <div class="skill-category reveal reveal-delay-2">
+        <div class="skill-category-name">Databases</div>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Doctrine</span><span class="skill-tag">Prisma ORM</span>
+        </div>
+      </div>
+      <div class="skill-category reveal reveal-delay-3">
+        <div class="skill-category-name">Soft Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Leadership</span><span class="skill-tag">Team Collaboration</span>
+          <span class="skill-tag">Problem-Solving</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section experience-inner">
+      <div class="section-header reveal">
+        <div class="section-label">
+          <span class="section-label-num">03</span>
+          <span class="section-label-line"></span>
+          <span class="section-label-text">Work history</span>
+        </div>
+        <h2 class="section-title">Work <em>Experience</em></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">Jul 2025 — Aug 2025</div>
+          <h3 class="timeline-role">Summer Intern — Full Stack</h3>
+          <div class="timeline-company">Electrocontact Tunisie · Ksar Hellal, Tunisia</div>
+          <p class="timeline-desc">
+            Developed <strong>Electrocontact Digital Tracking</strong> — a real-time web traceability
+            platform to digitalise industrial factory processes. Built live tracking dashboards,
+            order management, and production flow monitoring from scratch.
+          </p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">React.js</span><span class="timeline-tag">Node.js</span>
+            <span class="timeline-tag">MySQL</span><span class="timeline-tag">Real-time tracking</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">Feb 2024 — Jun 2024</div>
+          <h3 class="timeline-role">Final Year Project Intern</h3>
+          <div class="timeline-company">Pura Solutions · Sousse, Tunisia</div>
+          <p class="timeline-desc">
+            Designed and built <strong>DataRoom</strong> — a secure cloud platform for sharing
+            confidential accounting documents. JWT authentication, encrypted file sharing,
+            role-based access control.
+          </p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Next.js</span><span class="timeline-tag">Nest.js</span>
+            <span class="timeline-tag">MongoDB</span>
+            <span class="timeline-tag">JWT</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">Jul 2023 — Aug 2023</div>
+          <h3 class="timeline-role">Summer Intern — Full Stack</h3>
+          <div class="timeline-company">Proxym-IT · Sousse, Tunisia</div>
+          <p class="timeline-desc">
+            Developed <strong>SeatFlix</strong> — an online cinema booking platform with a complete
+            REST API covering authentication, movie listings, and seat reservation, backed by a
+            clean React frontend.
+          </p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Node.js</span>
+            <span class="timeline-tag">MySQL</span><span class="timeline-tag">Prisma ORM</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-3">
+          <span class="timeline-dot"></span>
+          <div class="timeline-date">Jun 2023 — Jul 2023</div>
+          <h3 class="timeline-role">Networking Intern</h3>
+          <div class="timeline-company">Sancella · Ksibet el Mediouni, Monastir</div>
+          <p class="timeline-desc">
+            Gained hands-on exposure to enterprise networking — protocols, architectures, and security
+            measures. Observed network device configuration and industrial security practices in a
+            live production environment.
+          </p>
+          <div class="timeline-tags">
+            <span class="timeline-tag">Network protocols</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="section-label-num">04</span>
+        <span class="section-label-line"></span>
+        <span class="section-label-text">What I've built</span>
+      </div>
+      <h2 class="section-title">Selected <em>Projects</em></h2>
+    </div>
+    <div class="projects-grid">
+
+      <article class="project-card featured reveal">
+        <div class="project-info">
+          <div class="project-num">001 · Featured · Ongoing</div>
+          <h3 class="project-title">SentinelBank — Secure e-Banking Microservices</h3>
+          <p class="project-desc">
+            Cloud-native e-Banking platform built around microservices integrating Cloud, Security,
+            and DevOps. Developing the Account Banking microservice (Spring Boot), Angular frontend,
+            and a simulated secure GNS3 infrastructure. Full DevSecOps stack: Docker/Kubernetes,
+            CI/CD pipelines, Grafana observability, SIEM/SOAR preparation.
+          </p>
+          <div class="project-stack">
+            <span>Angular</span><span>Spring Boot</span><span>Docker</span>
+            <span>Kubernetes</span><span>CI/CD</span><span>Grafana</span>
+            <span>SIEM/SOAR</span><span>GNS3</span>
+          </div>
+          <span class="project-status ongoing">In progress — Jan 2026 · Present</span>
+          <div class="project-gh-links">
+  <a href="https://github.com/assali-mohamed-ali/front-end.git" target="_blank" rel="noopener" class="project-gh-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+    Frontend
+  </a>
+  <a href="https://github.com/assali-mohamed-ali/account-service.git" target="_blank" rel="noopener" class="project-gh-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+    Account Service
+  </a>
+</div>
+        </div>
+        <div class="project-visual">
+          <span class="project-visual-inner">Cloud · Security · DevSecOps</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal-delay-1">
+        <div class="project-num">002</div>
+        <h3 class="project-title">DataRoom — Secure Cloud Document Platform</h3>
+        <p class="project-desc">
+          Secure cloud platform for sharing confidential accounting documents. Encrypted file sharing,
+          JWT auth, role-based access control, and a Flutter mobile app. Final-year project at ISIMM / Pura Solutions.
+        </p>
+        <div class="project-stack">
+          <span>Next.js</span><span>Nest.js</span><span>MongoDB</span><span>Flutter</span><span>JWT</span>
+        </div>
+        <span class="project-status">Completed · 2024</span>
+        <div class="project-gh-links">
+  <a href="https://github.com/elabayoudh/backend-project.git" target="_blank" rel="noopener" class="project-gh-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+    Backend GitHub
+  </a>
+</div>
+      </article>
+
+      <article class="project-card reveal reveal-delay-2">
+        <div class="project-num">003</div>
+        <h3 class="project-title">Electrocontact Digital Tracking</h3>
+        <p class="project-desc">
+          Real-time traceability web platform digitalising industrial factory workflows.
+          Full-stack with live order tracking, production flow monitoring, and multi-department
+          coordination dashboards.
+        </p>
+        <div class="project-stack">
+          <span>React.js</span><span>Node.js</span><span>MySQL</span>
+        </div>
+        <span class="project-status">Completed · 2025</span>
+        <div class="project-gh-links">
+  <a href="https://github.com/ela-bayoudh01/Task-Management-System-Frontend.git" target="_blank" rel="noopener" class="project-gh-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+    Frontend
+  </a>
+  <a href="https://github.com/ela-bayoudh01/Task-Management-System-Backend.git" target="_blank" rel="noopener" class="project-gh-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+    Backend
+  </a>
+</div>
+      </article>
+
+      <article class="project-card reveal reveal-delay-1">
+        <div class="project-num">004</div>
+        <h3 class="project-title">SportX — Sports Management Platform</h3>
+        <p class="project-desc">
+          Full-stack desktop + web platform for managing sports clubs and events.
+          Team project with JavaFX desktop client and Symfony web backend. Built a full
+          admin dashboard with CRUD operations.
+        </p>
+        <div class="project-stack">
+          <span>JavaFX</span><span>Symfony</span><span>PHP</span><span>MySQL</span>
+        </div>
+        <span class="project-status">Completed · 2025</span>
+        <div class="project-gh-links">
+  <a href="https://github.com/ela-bayoudh01/Admin-Dashboard.git" target="_blank" rel="noopener" class="project-gh-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+    View on GitHub
+  </a>
+</div>
+      </article>
+
+      <article class="project-card reveal reveal-delay-2">
+        <div class="project-num">005</div>
+        <h3 class="project-title">SeatFlix — Online Cinema Booking</h3>
+        <p class="project-desc">
+          Movie listing and seat-booking platform with a REST API for auth and reservations.
+          Clean separation between API and React frontend. Internship project at Proxym-IT.
+        </p>
+        <div class="project-stack">
+          <span>Node.js</span><span>Express</span><span>React</span><span>MySQL</span><span>Prisma</span>
+        </div>
+        <span class="project-status">Completed · 2023</span>
+        <div class="project-gh-links">
+  <a href="https://github.com/elabayoudh/Cinema-Reservation-Platform.git" target="_blank" rel="noopener" class="project-gh-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+    Backend GitHub
+  </a>
+</div>
+      </article>
+
+    </div>
+  </section>
+
+  
+
+  <!-- TRAINING -->
+  <section id="training" class="section">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="section-label-num">05b</span>
+        <span class="section-label-line"></span>
+        <span class="section-label-text">Certifications</span>
+      </div>
+      <h2 class="section-title">Training &amp; <em>Certifications</em></h2>
+    </div>
+    <div class="education-list reveal reveal-delay-1">
+      <div class="edu-item">
+        <div class="edu-year">Sep 2025 — Jan 2026</div>
+        <div class="edu-info">
+          <div class="edu-degree">Network Security</div>
+          <div class="edu-school">Cisco Networking Academy · Instructor-led · Network security &amp; vulnerability management · CCNA prep</div>
+        </div>
+        <span class="edu-badge">Certified</span>
+      </div>
+      <div class="edu-item">
+        <div class="edu-year">Nov 2025</div>
+        <div class="edu-info">
+          <div class="edu-degree">Prepare Your Career in Cybersecurity</div>
+          <div class="edu-school">Microsoft &amp; LinkedIn Learning · Essential cybersecurity competencies</div>
+        </div>
+        <span class="edu-badge">Certified</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards" class="section">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="section-label-num">06</span>
+        <span class="section-label-line"></span>
+        <span class="section-label-text">Recognition</span>
+      </div>
+      <h2 class="section-title">Awards &amp; <em>Competitions</em></h2>
+    </div>
+
+    <div class="awards-grid">
+      <div class="award-card reveal reveal-delay-1">
+        <div class="award-place">🥇 1st Place</div>
+        <h3 class="award-title">GreeNovation Hackathon</h3>
+        <div class="award-org">Organised by ESPRIM · Dec 2024</div>
+        <p class="award-desc">
+          Developed <strong>EasyLex</strong> — an AI-powered educational tool for children with
+          dyslexia. Won first place for innovation, technical depth, and social impact.
+        </p>
+      </div>
+      <div class="award-card reveal reveal-delay-2">
+        <div class="award-place">🥈 2nd Place</div>
+        <h3 class="award-title">Cybersecurity Hackathon "Insight"</h3>
+        <div class="award-org">Organised by IEEE ESPRIM SB · Nov 2025</div>
+        <p class="award-desc">
+          Delivered innovative web security solutions under time pressure. Focused on securing
+          web environments against real-world attack vectors in a collaborative team setting.
+        </p>
+      </div>
+      <div class="award-card reveal reveal-delay-3">
+        <div class="award-place">🥈 2nd Place</div>
+        <h3 class="award-title">Mini CTF — Securinets EPS</h3>
+        <div class="award-org">SecurinetsEPS · Polytech Sousse · Feb 2026</div>
+        <p class="award-desc">
+          Strong progression in CTF challenges: web exploitation, cryptography, and digital
+          forensics. Second participation with a major performance improvement from the team.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-header reveal" style="margin-top:80px;">
+      <div class="section-label">
+        <span class="section-label-num">—</span>
+        <span class="section-label-line"></span>
+        <span class="section-label-text">Community</span>
+      </div>
+      <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.4rem);">Community <em>Engagement</em></h2>
+    </div>
+
+    <div class="engagement-list reveal reveal-delay-1">
+      <div class="engage-item">
+        <div class="engage-period">Jan 2017 — Present</div>
+        <div class="engage-info">
+          <div class="engage-role">Scout Leader</div>
+          <div class="engage-org">Scout Tunisia</div>
+          <div class="engage-desc">Leadership development and multi-domain training sessions over 8+ years.</div>
+        </div>
+      </div>
+      <div class="engage-item">
+        <div class="engage-period">Nov 2021 — Jan 2024</div>
+        <div class="engage-info">
+          <div class="engage-role">President &amp; Robotics Trainer</div>
+          <div class="engage-org">Club CPU ISIMM</div>
+          <div class="engage-desc">Led the club as president, delivered robotics training workshops, managed events &amp; new member integration.</div>
+        </div>
+      </div>
+      <div class="engage-item">
+        <div class="engage-period">Nov 2024 — Oct 2025</div>
+        <div class="engage-info">
+          <div class="engage-role">Board Member</div>
+          <div class="engage-org">Club SciData, ESPRIM</div>
+          <div class="engage-desc">Organised technical training sessions and knowledge-sharing workshops.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="section-label-num">07</span>
+        <span class="section-label-line"></span>
+        <span class="section-label-text">Get in touch</span>
+      </div>
+      <h2 class="section-title">Let's <em>Connect</em></h2>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-left reveal reveal-delay-1">
+        <h3 class="contact-headline">Open to <em>internships</em><br>and collaborations</h3>
+        <p class="contact-sub">
+          Whether you have an internship opportunity, a project to collaborate on, or just want
+          to discuss cloud security and DevOps — I'd love to hear from you.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:elapro01bayoudh@gmail.com" class="contact-link-item">
+            <span class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+            </span>
+            <span class="contact-link-info">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">elapro01bayoudh@gmail.com</span>
+            </span>
+          </a>
+          <a href="tel:+21629203089" class="contact-link-item">
+            <span class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span class="contact-link-info">
+              <span class="contact-link-label">Phone</span>
+              <span class="contact-link-value">+216 29 203 089</span>
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/ela-bayoudh-34976823b/" target="_blank" rel="noopener" class="contact-link-item">
+            <span class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </span>
+            <span class="contact-link-info">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">linkedin.com/in/ela-bayoudh</span>
+            </span>
+          </a>
+          <a href="https://github.com/ela-bayoudh01" target="_blank" rel="noopener" class="contact-link-item">
+            <span class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+            </span>
+            <span class="contact-link-info">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">github.com/elabayoudh</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-availability reveal reveal-delay-2">
+        <div class="availability-badge">
+          <span class="availability-dot"></span>
+          Available for opportunities
+        </div>
+        <h3>Ready to contribute</h3>
+        <p>
+          Actively seeking internship opportunities in cloud infrastructure, cybersecurity, or
+          full-stack development. I bring hands-on experience with secure systems, DevSecOps,
+          and a competitive CTF background.
+        </p>
+        <a href="CV_BayoudhEla.pdf" download class="btn-primary" style="display:inline-flex;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download my CV
         </a>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="fade-in">
-        <h2 class="section-title">ABOUT ME</h2>
-        <div class="about-section">
-            <div class="about-hero">
-                <h3>Exploring the Future of Cloud & Cybersecurity</h3>
-                <p class="about-description">
-                    As a second-year engineering student specializing in Cloud and Cybersecurity, I am passionate about building a strong foundation in secure cloud technologies and innovative cybersecurity solutions. Eager to grow in a dynamic, technology-driven environment, I am committed to gaining hands-on experience and building a solid foundation in these fields through continuous learning and practical application.
-                </p>
-                <a href="Ela-Bayoudh-Resume.pdf" download="Ela_Bayoudh_CV.pdf" class="inline-block px-6 py-3 bg-yellow-600 text-gray-800 font-semibold rounded-full hover:bg-yellow-500 transition">Download My CV (PDF)</a>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <span class="about-card-icon">💻</span>
-                    <h4>Technical Skills</h4>
-                    <p>Built skills in HTML, CSS, JavaScript, React.js, Node.js, Express.js, Java, PHP, Next.js, Nest.js, Symfony, and MySQL through team projects like SportX and a task management system.</p>
-                </div>
-                <div class="about-card">
-                    <span class="about-card-icon">🔒</span>
-                    <h4>Cybersecurity Interest</h4>
-                    <p>Actively learning secure cloud architectures and cybersecurity practices, with hands-on experience in building secure platforms.</p>
-                </div>
-                <div class="about-card">
-                    <span class="about-card-icon">🤝</span>
-                    <h4>Team Leadership</h4>
-                    <p>Led teams in scout groups and university clubs, fostering collaboration and managing technical projects and events.</p>
-                </div>
-            </div>
-            <div class="achievements-grid">
-                <div class="achievement-item">
-                    <div class="achievement-number">4</div>
-                    <div class="achievement-label">Projects Completed</div>
-                </div>
-                <div class="achievement-item">
-                    <div class="achievement-number">4</div>
-                    <div class="achievement-label">Internships</div>
-                </div>
-                <div class="achievement-item">
-                    <div class="achievement-number">1</div>
-                    <div class="achievement-label">Hackathon Win</div>
-                </div>
-                <div class="achievement-item">
-                    <div class="achievement-number">3</div>
-                    <div class="achievement-label">Arabic (Native), French (B2), English (B2)</div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-copy">© 2025 Ela Bayoudh — All rights reserved</p>
+    <div class="footer-links">
+      <a href="https://github.com/ela-bayoudh01" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ela-bayoudh-34976823b/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:elapro01bayoudh@gmail.com">Email</a>
+    </div>
+  </footer>
 
-    <!-- EDUCATION -->
-    <section id="education" class="fade-in">
-        <h2 class="section-title">EDUCATION</h2>
-        <div class="mission-grid">
-            <div class="mission-card">
-                <h4>Engineering Degree in Computer Engineering</h4>
-                <p>Private Higher School of Engineering and Technology of Monastir (ESPRIM)<br>Sep 2024 - Present</p>
-                <span class="mission-status">Ongoing</span>
-            </div>
-            <div class="mission-card">
-                <h4>Degree in Software and Computer Science</h4>
-                <p>Higher Institute of Computer Science and Mathematics of Monastir (ISIMM)<br>Sep 2021 - Jun 2024</p>
-                <span class="mission-status">Completed</span>
-            </div>
-            <div class="mission-card">
-                <h4>Baccalaureate Degree in Mathematics</h4>
-                <p>Pioneer School of Monastir<br>Sep 2017 - Jun 2021</p>
-                <span class="mission-status">Completed</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="fade-in">
-        <h2 class="section-title">SKILLS</h2>
-        <div class="equipment-container">
-            <div class="equipment-item"><span>HTML, CSS</span></div>
-            <div class="equipment-item"><span>Java, JavaFX</span></div>
-            <div class="equipment-item"><span>PHP, Symfony</span></div>
-            <div class="equipment-item"><span>JavaScript</span></div>
-            <div class="equipment-item"><span>Next.js, Nest.js</span></div>
-            <div class="equipment-item"><span>React.js</span></div>
-            <div class="equipment-item"><span>Node.js, Express.js</span></div>
-            <div class="equipment-item"><span>MySQL</span></div>
-            <div class="equipment-item"><span>Git</span></div>
-            <div class="equipment-item"><span>Team Collaboration</span></div>
-            <div class="equipment-item"><span>Problem-Solving</span></div>
-            <div class="equipment-item"><span>Leadership</span></div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="missions-section fade-in">
-        <div class="missions-container">
-            <h2 class="section-title">WORK EXPERIENCE</h2>
-            <div class="mission-content active" id="experience">
-                <div class="mission-grid">
-                    <div class="mission-card">
-                        <h4>Summer Internship</h4>
-                        <p>Nexans Ksarhellal, Ksarhellal, Tunisia<br>Jul 2025 - Aug 2025<br>Contributed to the development of a web-based task management system to improve departmental workflows.</p>
-                        <span class="mission-status">Completed</span>
-                    </div>
-                    <div class="mission-card">
-                        <h4>Internship for Final Year Project</h4>
-                        <p>Pura Solutions, Sousse, Tunisia<br>Feb 2024 - Jun 2024<br>Designed and developed a cloud platform for sharing confidential accounting documents using Next.js, Nest.js, and Flutter, implementing secure file sharing and user authentication.</p>
-                        <span class="mission-status">Completed</span>
-                    </div>
-                    <div class="mission-card">
-                        <h4>Summer Internship</h4>
-                        <p>Proxym-IT, Sousse, Tunisia<br>Jul 2023 - Aug 2023<br>Developed an online cinema booking platform using Node.js, React, CSS, Prisma, and MySQL, focusing on REST API for authentication and booking processes.</p>
-                        <span class="mission-status">Completed</span>
-                    </div>
-                    <div class="mission-card">
-                        <h4>Summer Internship</h4>
-                        <p>Sancella, Ksibet el Mediouni / Monastir<br>Jun 2023 - Jul 2023<br>Gained knowledge in computer networking, including protocols, architectures, and security measures, while observing network device configuration.</p>
-                        <span class="mission-status">Completed</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="missions-section fade-in">
-        <div class="missions-container">
-            <h2 class="section-title">PROJECTS</h2>
-            <div class="mission-content active" id="projects">
-                <div class="mission-grid">
-                    <div class="mission-card">
-                        <h4>SportX Sports Management Platform</h4>
-                        <p>2025<br>Developed a desktop and web application using JavaFX, Symfony, PHP, FXML, CSS, and MySQL, focusing on full-stack development and team collaboration.</p>
-                        <span class="mission-status">Ongoing</span>
-                    </div>
-                    <div class="mission-card">
-                        <h4>Electrocontact Digital Tracking</h4>
-                        <p>2025<br>Developed a web-based task management system using React.js, Node.js, Express.js, and MySQL to streamline workflows across multiple departments (Clients, Supervisor, CAD for design, and CNC for manufacturing), enhancing task tracking, order processing, and supervisory oversight.</p>
-                        <span class="mission-status">Completed</span>
-                    </div>
-                    <div class="mission-card">
-                        <h4>Cloud Platform for Confidential Accounting Documents</h4>
-                        <p>2024<br>Built a secure cloud platform using Next.js, Nest.js, Tailwind CSS, and MongoDB for sharing confidential accounting documents.</p>
-                        <span class="mission-status">Completed</span>
-                    </div>
-                    <div class="mission-card">
-                        <h4>Online Cinema Booking Platform</h4>
-                        <p>2023<br>Developed a platform with Node.js, Express.js, HTML, CSS, MySQL, and Prisma, implementing REST API for movie listing and booking.</p>
-                        <span class="mission-status">Completed</span>
-                    </div>
-                    <div class="mission-card">
-                        <h4>E-Learning Platform</h4>
-                        <p>2022<br>Designed and developed a platform using HTML, CSS, PHP, MySQL, and UML design for educational content delivery.</p>
-                        <span class="mission-status">Completed</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="fade-in">
-        <h2 class="section-title">CONTACT ME</h2>
-        <div class="contact-form">
-            <div class="form-group">
-                <p>Email: <a href="mailto:elapro01bayoudh@gmail.com" class="underline hover:text-yellow-600">elapro01bayoudh@gmail.com</a></p>
-            </div>
-            <div class="form-group">
-                <p>Phone: 29 203 089</p>
-            </div>
-            <div class="form-group">
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/ela-bayoudh-34976823b/" class="underline hover:text-yellow-600">linkedin.com/in/ElaBayoudh</a></p>
-            </div>
-            <div class="form-group">
-                <p>GitHub: <a href="https://github.com/elabayoudh" class="underline hover:text-yellow-600">github.com/elabayoudh</a></p>
-            </div>
-            <div class="form-group">
-                <p>GitHub (Secondary): <a href="https://github.com/ela-bayoudh01" class="underline hover:text-yellow-600">github.com/ela-bayoudh01</a></p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>My Journey</h3>
-                <p style="color: var(--star-silver); margin-bottom: 15px;">
-                    Driven by a passion for cloud and cybersecurity, I’m diving into these fields from the ground up, eagerly learning and building secure, innovative solutions. 
-                <a href="#about" class="underline hover:text-soft-pink">Discover My Story</a>
-            </div>
-            <div class="footer-section">
-                <h3>Get in Touch</h3>
-                <p style="color: var(--star-silver); margin-bottom: 15px;">
-                    Let's connect to discuss opportunities, collaborations, or just chat about tech!
-                </p>
-                <a href="#contact" class="underline hover:text-soft-pink">Contact Me</a>
-            </div>
-            <div class="footer-section">
-                <h3>Connect</h3>
-                <p style="color: var(--star-silver); margin-bottom: 15px;">
-                    Connect with me on professional networks
-                </p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/ela-bayoudh-34976823b/" aria-label="LinkedIn">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/elabayoudh" aria-label="GitHub">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.14 6.84 9.47.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.52.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.56.73.56 1.47v2.18c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Ela Bayoudh - Cloud & Cybersecurity Portfolio. Design: <a href="https://www.tooplate.com" target="_blank" rel="noopener nofollow">Tooplate</a></p>
-        </div>
-    </footer>
-    <script src="portfolio-script.js"></script>
+  <script type="module" src="JS/main.js"></script>
 </body>
 </html>
