@@ -133,6 +133,8 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  flex-wrap: wrap;        /* ← ajoute cette ligne */
+  max-width: 520px;       /* ← ajoute cette ligne */
   opacity: 0;
   animation: fadeSlideUp 0.9s var(--ease) 1s forwards;
 }
@@ -233,7 +235,7 @@
 /* Scroll indicator */
 .scroll-indicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
