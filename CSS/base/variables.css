@@ -27,6 +27,12 @@
   --glow-violet:  rgba(180, 157, 255, 0.25);
   --glow-rose:    rgba(244, 167, 192, 0.25);
 
+  /* Gradient family — violet → deep blue → black */
+  --mauve:        #8868e6;
+  --indigo:       #4a3a9e;
+  --midnight:     #1b1640;
+  --gradient-accent: linear-gradient(135deg, var(--violet), var(--mauve) 45%, var(--indigo) 100%);
+
   /* Text */
   --text-primary:   #f0eeff;
   --text-secondary: #a8a0c8;

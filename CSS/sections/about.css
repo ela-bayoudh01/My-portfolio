@@ -1,0 +1,131 @@
+/* ═══════════════════════════════════════════
+   ABOUT SECTION
+═══════════════════════════════════════════ */
+
+#about {
+  background: var(--ink-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  max-width: none;
+}
+
+.about-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.about-text p strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.about-detail-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-detail-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.about-detail-key {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--violet);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  min-width: 90px;
+  padding-top: 2px;
+}
+
+.about-detail-val {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+/* Cards right side */
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-card {
+  padding: 28px 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: rgba(180, 157, 255, 0.03);
+  transition: border-color 0.3s, background 0.3s, transform 0.3s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--violet), var(--rose));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+
+.about-card:hover {
+  border-color: var(--border-hover);
+  background: rgba(180, 157, 255, 0.06);
+  transform: translateX(6px);
+}
+
+.about-card:hover::before { transform: scaleX(1); }
+
+.about-card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.about-card h4 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.about-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .about-grid { gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+}

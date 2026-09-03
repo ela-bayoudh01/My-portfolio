@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════
+   EDUCATION SECTION
+   Shared markup/classes also used by the Training & Certifications section
+═══════════════════════════════════════════ */
+
+#education {
+  background: var(--ink-2);
+  border-top: 1px solid var(--border);
+  max-width: none;
+}
+
+.education-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.edu-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 36px 40px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s;
+}
+
+.edu-item:last-child { border-bottom: none; }
+.edu-item:hover { background: var(--surface-2); }
+
+.edu-year {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.edu-degree {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.edu-school {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+.edu-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.edu-badge.current {
+  border-color: rgba(180,157,255,0.4);
+  color: var(--violet);
+  background: rgba(180,157,255,0.07);
+}
+
+@media (max-width: 768px) {
+  .edu-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 28px 24px;
+  }
+}

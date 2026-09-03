@@ -18,6 +18,12 @@ export function initReveal() {
   els.forEach(el => obs.observe(el));
 }
 
+// Language switches rebuild content in place — skip the scroll-reveal replay so
+// already-visible sections don't blink out and re-animate.
+export function markAllRevealed() {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}
+
 export function initCursor() {
   const dot  = document.getElementById('cursor');
   const ring = document.getElementById('cursor-ring');
@@ -66,7 +72,15 @@ export function initCursor() {
     requestAnimationFrame(animate);
   })();
 
-  // Hover state — use CSS class, not inline styles
+  bindCursorHoverTargets();
+}
+
+// Re-run after any re-render (e.g. a language switch) that recreates these elements.
+export function bindCursorHoverTargets() {
+  const dot  = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  if (!dot || !ring) return;
+
   const hoverTargets = 'a, button, .project-card, .skill-tag, .about-card, .contact-link-item, .edu-item, .timeline-item';
   document.querySelectorAll(hoverTargets).forEach(el => {
     el.addEventListener('mouseenter', () => {

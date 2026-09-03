@@ -1,0 +1,141 @@
+/* ═══════════════════════════════════════════
+   CONTACT SECTION
+═══════════════════════════════════════════ */
+
+#contact {
+  padding-bottom: calc(var(--section-padding) + 60px);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.contact-headline em {
+  font-style: italic;
+  color: var(--violet);
+}
+
+.contact-sub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  transition: all 0.3s var(--ease);
+  text-decoration: none;
+}
+
+.contact-link-item:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-2);
+  transform: translateX(8px);
+}
+
+.contact-link-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--violet);
+  flex-shrink: 0;
+}
+
+.contact-link-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.contact-link-value {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* Right side availability card */
+.contact-availability {
+  padding: 48px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  position: sticky;
+  top: 120px;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: rgba(180, 157, 255, 0.1);
+  border: 1px solid rgba(180,157,255,0.3);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--violet);
+  letter-spacing: 0.1em;
+  margin-bottom: 32px;
+}
+
+.availability-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--violet);
+  animation: blink 2s infinite;
+}
+
+.contact-availability h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.contact-availability p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-availability { padding: 32px 24px; }
+}
