@@ -78,7 +78,7 @@ export const contact = {
     fr: "Que vous ayez une opportunité de stage, un projet de collaboration, ou simplement l'envie d'échanger sur la sécurité cloud et le DevOps — j'aimerais beaucoup avoir de vos nouvelles.",
   },
   links: [
-    { label: { en: 'Email', fr: 'Email' }, value: 'elapro01bayoudh@gmail.com', href: 'mailto:elapro01bayoudh@gmail.com', icon: 'email' },
+    { label: { en: 'Email', fr: 'Email' }, value: 'elaabayoudhpro@gmail.com', href: 'mailto:elaabayoudhpro@gmail.com', icon: 'email' },
     { label: { en: 'Phone', fr: 'Téléphone' }, value: '+216 29 203 089', href: 'tel:+21629203089', icon: 'phone' },
     { label: { en: 'LinkedIn', fr: 'LinkedIn' }, value: 'linkedin.com/in/ela-bayoudh', href: 'https://www.linkedin.com/in/ela-bayoudh-34976823b/', icon: 'linkedin' },
     { label: { en: 'GitHub', fr: 'GitHub' }, value: 'github.com/elabayoudh', href: 'https://github.com/ela-bayoudh01', icon: 'github' },
@@ -97,6 +97,6 @@ export const footer = {
   links: [
     { label: { en: 'GitHub', fr: 'GitHub' }, href: 'https://github.com/ela-bayoudh01' },
     { label: { en: 'LinkedIn', fr: 'LinkedIn' }, href: 'https://www.linkedin.com/in/ela-bayoudh-34976823b/' },
-    { label: { en: 'Email', fr: 'Email' }, href: 'mailto:elapro01bayoudh@gmail.com' },
+    { label: { en: 'Email', fr: 'Email' }, href: 'mailto:elaabayoudhpro@gmail.com' },
   ],
 };
